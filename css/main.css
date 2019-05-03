@@ -1,0 +1,445 @@
+:root {
+	--primary-color: #fff000;
+	--font-family: 'Galano Grotesque SB';
+	--font-navbar: 'Galano Grotesque AE';
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: "Galano Grotesque AE";
+	src: url("../fonts/Galano Grotesque Alt Extra Light_1.otf");
+}
+
+@font-face {
+	font-family: "Galano Grotesque SB";
+	src: url('../fonts/Galano Grotesque Semi Bold Italic_1.otf');
+}
+
+html{
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	min-height: 100vh;
+	font-family: var(--font-family);
+	color: white;
+	background-image: url('../image/fondomadera.jpg');
+	background-size: cover;
+}
+.section {
+	margin: 1rem 0;
+}
+.navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-family: var(--font-navbar);
+}
+.navbar .brand img {
+	width: 150px;
+}
+.navbar .toggle {
+	padding: .5rem 0;
+}
+.navbar .toggle img {
+	width: 30px;
+}
+.nav {
+	list-style: none;
+	display: none;
+}
+.nav_item {
+	display: inline-flex;
+	font-size: 0;
+}
+.nav_item a {
+	display: block;
+	padding: .5rem 1rem;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	color: white;
+	font-size: 1rem;
+	border-bottom: 2px solid transparent;
+}
+.nav .close-nav {
+	display: none;
+}
+.nav_item a:hover {
+	color: var(--primary-color);
+	border-bottom-color: white;
+}
+.nav.active {
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 100;
+}
+.nav.active .nav_item {
+	display: block;
+	width: 100%;
+}
+.nav.active .nav_item a {
+	display: block;
+	font-size: 2rem;
+	text-align: center;
+}
+.nav.active .nav_item.social-media {
+	display: flex;
+	justify-content: center;
+}
+.nav.active .nav_item.social-media a {
+	display: inline-block;
+}
+.nav.active .nav_item.social-media img {
+	width: 30px;
+}
+.nav.active .close-nav {
+	position: absolute;
+	display: flex;
+	bottom: 2rem;
+	left: calc(50% - 30px);
+	color: white;
+	font-size: 2rem;
+	border-radius: 100px;
+	border: 2px solid white;
+	width: 60px;
+	height: 60px;
+	justify-content: center;
+	align-items: center;
+	line-height: 0;
+}
+.nav.active .close-nav span {
+	display: inline-table;
+}
+.social-media img {
+	position: relative;
+	top: 5px;
+	width: 20px;
+}
+.home-food {
+	margin-top: 3rem;
+}
+.home-food img {
+	width: fit-content;
+}
+.w-brand {
+	position: absolute;
+	width: 200px;
+	top: calc(30vh - 44px);
+	left: calc(50% - 100px)
+}
+
+.section .ed-container.fullscreen {
+	height: 100%;
+}
+
+.subtitle {
+	color: var(--primary-color);
+	font-size: 2rem;
+	text-transform: uppercase;
+	font-family: var(--font-navbar);
+	font-weight: 100;
+	text-align: center;
+}
+
+.board {
+	padding: 1rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+	width: 100%;
+	background-image: url('../image/pizarra.jpg');
+	background-size: cover;
+	box-shadow: 0px -10px 20px rgba(0,0,0,0.8);
+}
+
+.menu {
+	list-style: none;
+	color: white;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-around;
+}
+.menu_item,
+.menu_title {
+	margin: .2rem 0;
+	font-size: 1.2rem;
+	font-weight: 100;
+	text-align: center;
+}
+.menu_title {
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+.image {
+	position: relative;
+	height: 100%;
+	min-height: 200px;
+	width: 100%;
+	background-size: cover;
+}
+.image-50 {
+	height: 49%;
+}
+.image-50:first-child {
+	margin-bottom: .5rem;
+}
+.image .cart {
+	position: absolute;
+	bottom: -1rem;
+	right: -1rem;
+	width: 3rem;
+}
+
+.clearfix {
+	overflow: hidden;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.promotion {
+	position: relative;
+	width: 100%;
+	height: 180px;
+	overflow: hidden;
+}
+.promotion img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.promotion .cart,
+.combo-image .cart {
+	position: absolute;
+	bottom: 2.5rem;
+	right: 0rem;
+	width: 3rem;
+	z-index: 5;
+}
+.delivery {
+	position: relative;
+	top: 2rem;
+	width: 100%;
+	margin-bottom: 4rem;
+}
+
+.card {
+	width: 400px;
+	margin-top: -6rem;
+	margin-bottom: -2rem;
+}
+
+form {
+	width: 100%;
+}
+
+form .menu_item {
+	margin: 0;
+}
+
+.form-group label,
+.form-group input,
+.form-group select {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	display: block;
+	width: 100%;
+}
+.form-group input,
+.form-group select {
+	border-radius: 4px;
+	background-color: rgba(255,255,255,0.8);
+	border: 0;
+	padding: .25rem;
+}
+.form-group label {
+	font-size: 1.1rem;
+}
+.small {
+	font-size: .9rem;
+}
+[class*=button] {
+	position: relative;
+	top: 1rem;
+	border: 0;
+	padding: .5rem 1rem;
+	border-radius: 4px;
+	font-size: 1.2rem;
+}
+.button--primary {
+	background-color: var(--primary-color);
+	color: black;
+	cursor: pointer;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+
+.combo {
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+}
+
+.combo-title {
+	text-align: center;
+	font-size: 1.4rem;
+	color: var(--primary-color);
+	font-family: var(--font-navbar);
+	text-transform: uppercase;
+}
+
+.combo-description {
+	text-align: center;
+	font-size: .8rem;
+	font-weight: 100;
+}
+
+.combo-image {
+	position: relative;
+	margin-top: 1rem;
+}
+
+.themenu {
+	width: 80%;
+}
+.themenu h3 {
+	background-image: url('../image/pizarra.jpg');
+	font-family: var(--font-navbar);
+	color: var(--primary-color);
+	background-size: cover;
+	font-weight: 100;
+	padding: .5rem 4rem;
+	font-size: 2rem;
+	font-weight: 100;
+	text-align: center;
+	text-transform: uppercase;
+}
+.themenu ul {
+	list-style: none;
+}
+.themenu li a {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 100;
+	font-family: var(--font-navbar);
+	color: var(--primary-color);
+	font-size: 1.2rem;
+}
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid var(--primary-color);
+}
+
+.footer {
+	margin: 2rem;
+	font-family: var(--font-navbar)
+}
+
+.footer p {
+	margin: 0;
+	text-align: center;
+}
+
+.footer span {
+	color: var(--primary-color);
+}
+
+#congrats h3 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: var(--primary-color);
+	font-size: 2rem;
+}
+
+#congrats p {
+	text-align: center;
+	font-family: var(--font-navbar);
+}
+
+@media screen and (min-width: 640px) {
+	.section {
+		margin: 3rem 0;
+	}
+	.board {
+		padding: 2rem 3rem;
+		margin-left: auto;
+		margin-right: auto;
+		width: 70%;
+	}
+	.ed-item.border-left {
+		border-left: 4px solid var(--primary-color);
+		padding: 0 .5rem;
+	}
+	.ed-item.border-right {
+		border-right: 4px solid var(--primary-color);
+		padding: 0 .5rem;
+	}
+	.menu_item,
+	.menu_title {
+		text-align: initial;
+	}
+	.promotion {
+		width: 70%;
+		height: 380px;
+	}
+	.form-group label,
+	.form-group input,
+	.form-group select {
+		width: 80%;
+	}
+	.padding-left {
+		padding-left: 3rem;
+	}
+	.subtitle {
+		font-size: 3rem;
+		text-align: left;
+	}
+	.delivery {
+		width: 300px;
+		margin-bottom: 0;
+	}
+	.w-brand {
+		width: auto;
+		top: calc(50% - 44px);
+		left: calc(50% - 209px);
+	}
+	.themenu h3 {
+		padding: .1rem 4rem;
+		font-size: 3rem;
+	}
+	.themenu {
+		width: auto
+	}
+	.home-food {
+		margin-top: 0;
+	}
+	.navbar .toggle {
+		display: none;
+	}
+	.navbar .nav {
+		display: flex;
+	}
+}
